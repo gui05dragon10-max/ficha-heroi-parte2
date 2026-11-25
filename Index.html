@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto RPG</title>
+    <link rel="stylesheet" href="CSS/Gold.css">
+    <script src="Java/java.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+      <h1 class="titulo qualquer" style="display: block; margin: 0 auto;" >Leon Lionheart-O SANTO DO SOL</h1>
+    </header>
+     <br>
+     <img src="imagens/Leon.JPG" 
+     style="display: block; margin: 0 auto;"
+     alt="O Santo" 
+     width="50%">
+    <nav>
+      <br>
+   <div class="botoes-container" id="menuNav">
+    <a class="botaol" href="#Sobre">Sobre o Herói</a>
+    <a class="botaol" href="#Atributos">Atributos</a>
+    <a class="botaol" href="#Habilidades">Habilidades</a>
+    <a class="botaol" href="#Inventário">Inventário</a>
+    <a class="botaol" href="#Conquistas">Conquistas</a>
+    <a class="botaol" href="#Contato-Guilda">Contato com a Guilda</a>
+   </div>
+
+   </nav>
+   <main>
+    <br><br><br>
+       <section id="Sobre">
+          <h2 class="resto" style="display: block; margin: 0 auto;" >Sobre o Herói</h2>
+       </section>
+       <br>
+          <h4 class="letra" style="display: block; margin: 0 auto;" >
+            <p><strong>Leon Lionheart</strong> é um paladino sagrado e campeão da Ordem do Sol Dourado. Nascido em uma pequena vila 
+                que foi tragicamente destruída por orcs, Leon foi mantido em cativeiro até ser resgatado e adotado por um nobre paladino, 
+                que o introduziu aos caminhos da honra e da fé.
+            </p>
+            <p>
+              Levado para a Igreja Sagrada do Sol, ele passou por intensos treinamentos e superou duras provações até ser abençoado 
+              diretamente com os poderes da deusa Solaria. Agora, vestindo os trajes e empunhando as armas do 
+              <strong>Santo do Sol</strong>, Leon dedica sua vida a lutar contra os monstros e ser o protetor supremo dos inocentes.
+            </p>
+         <span id="textoExtra" style="display: none;">
+          <p>
+            Durante seu ritual de consagração na Igreja Sagrada do Sol, Leon não apenas recebeu a <strong>Espada Sagrada</strong> e 
+            a <strong>Armadura do Solstício</strong>, mas também teve uma visão sombria: o despertar das antigas forças ligadas 
+            ao <em>Trono Negro</em> e aos temidos espectros <em>Khorzûl</em>.
+          </p>
+          <p>
+            Guiado pelo juramento de nunca permitir que outros inocentes sofram o mesmo destino de sua vila natal, o Santo do Sol 
+            iniciou uma cruzada solitária pelas terras mais perigosas do continente — desde as ruínas esquecidas de Sarnanor até as 
+            profundezas vulcânicas de Ghash-Dûr — selando males ancestrais e protegendo os reinos da luz.
+          </p>
+</span>
+          <button id="btnVerMais" class="botaol" style="margin-top: 15px; cursor: pointer;">Ver história completa</button>
+          </h4>
+       <br><br><br>
+
+
+       <section id="Atributos">
+         <h2 class="resto" style="display: block; margin: 0 auto;">Atributos & Evolução</h2>
+    
+    <div class="painel-atributos-wrapper">
+        <!-- Lado Esquerdo: Tabela de Atributos -->
+        <div class="tabela-container">
+            <table class="tabela-atributos">
+                <thead>
+                    <tr>
+                        <th>Ícone</th>
+                        <th>Atributo</th>
+                        <th>Valor Base</th>
+                        <th>Bônus</th>
+                        <th>Nível Visual</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><i class="fas fa-fist-raised"></i></td>
+                        <td class="nome-atributo">Força (FOR)</td>
+                        <td id="val-for">70</td>
+                        <td class="modificador">+5</td>
+                        <td>
+                            <div class="barra-fundo">
+                                <div id="bar-for" class="barra-progresso" style="width: 75%;"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-running"></i></td>
+                        <td class="nome-atributo">Agilidade (AGI)</td>
+                        <td id="val-agi">45</td>
+                        <td class="modificador">+3</td>
+                        <td>
+                            <div class="barra-fundo">
+                                <div id="bar-agi" class="barra-progresso" style="width: 48%;"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-heart"></i></td>
+                        <td class="nome-atributo">Vitalidade (VIT)</td>
+                        <td id="val-vit">75</td>
+                        <td class="modificador">+4</td>
+                        <td>
+                            <div class="barra-fundo">
+                                <div id="bar-vit" class="barra-progresso" style="width: 79%;"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-shield-alt"></i></td>
+                        <td class="nome-atributo">Defesa (DEF)</td>
+                        <td id="val-def">78</td>
+                        <td class="modificador">+6</td>
+                        <td>
+                            <div class="barra-fundo">
+                                <div id="bar-def" class="barra-progresso" style="width: 84%;"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><i class="fas fa-sun"></i></td>
+                        <td class="nome-atributo">Fé/Espírito (FTH)</td>
+                        <td id="val-fth">85</td>
+                        <td class="modificador">+7</td>
+                        <td>
+                            <div class="barra-fundo">
+                                <div id="bar-fth" class="barra-progresso" style="width: 92%;"></div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Lado Direito: Barra de XP Interativa + Estatísticas -->
+        <div class="coluna-lateral-atributos">
+            <!-- Card de XP e Evolução -->
+            <div class="card-atributos card-xp">
+                <h2>Nível do Herói: <span id="nivelHeroi" style="color: #fff;">1</span></h2>
+                <p id="textoXp" style="font-weight: bold; color: gold;">30 / 100 XP</p>
+                
+                <div class="barra-fundo" style="height: 20px; margin: 12px 0; border: 1px solid gold;">
+                    <div id="barraProgressoXp" class="barra-progresso" style="width: 30%; transition: width 0.4s ease;"></div>
+                </div>
+
+                <button id="btnGanharXp" class="botaol" style="width: 100%; cursor: pointer; margin-top: 8px;">
+                    ⚔️ Completar Missão (+25 XP)
+                </button>
+                
+                <p id="mensagemLevelUp" style="margin-top: 12px; font-weight: bold; min-height: 24px;"></p>
+            </div>
+
+            <!-- Card de Estatísticas de Combate -->
+            <div class="card-atributos">
+                <h2>Estatísticas de Combate</h2>
+                <ul class="lista-atributos-simples">
+                    <li><strong>HP (Vida):</strong> <span id="stat-hp">6.850</span></li>
+                    <li><strong>MP (Mana/Luz):</strong> <span id="stat-mp">3.420</span></li>
+                    <li><strong>Dano Físico:</strong> <span id="stat-fis">420</span></li>
+                    <li><strong>Dano Mágico (Luz):</strong> <span id="stat-mag">615</span></li>
+                    <li><strong>Armadura:</strong> 65% | <strong>Res. Sombria:</strong> 80%</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <br><br>
+        <section id="Habilidades">
+          <h2 class="resto" style="display: block; margin: 0 auto;">Habilidades</h2>
+        </section>
+        <br><br>
+
+         <!-- O JavaScript vai injetar os cards de habilidades automaticamente aqui -->
+         <div id="containerHabilidadesDinamicas"></div>
+         <br><br>
+
+         
+        
+        <section id="Inventário">
+         <h2 class="resto" style="display: block; margin: 0 auto;">
+            Inventário <span id="contadorInventario" style="font-size: 0.85rem; color: #4caf50;"></span>
+         </h2>
+        </section>
+        <br>
+
+        <!-- Botões de Filtro Interativo -->
+        <div class="filtros-inventario">
+          <button class="botaol btn-filtro ativo" data-filtro="todos">Todos</button>
+          <button class="botaol btn-filtro" data-filtro="Arma">Armas</button>
+          <button class="botaol btn-filtro" data-filtro="Armadura">Armaduras</button>
+          <button class="botaol btn-filtro" data-filtro="Vestimenta">Vestimentas</button>
+        </div>
+
+        <div id="containerInventarioDinamico" class="grid-habilidades"></div>
+        <br><br>
+
+
+
+
+       <section id="Conquistas">
+        <h2 class="resto" style="display: block; margin: 0 auto;">
+           Conquistas <span id="contadorConquistas" style="font-size: 0.85rem; color: #4caf50;"></span>
+        </h2>
+       </section>
+       <br><br>
+
+       <div id="containerConquistasDinamicas"></div>
+
+
+
+
+
+        <br><br>
+        <section id="Contato-Guilda">
+            <h2 class="resto" style="display: block; margin: 0 auto;" >Contato com a Guilda</h2>
+        </section>
+        <br>
+
+         <div class="contato-container letra" style="display: block; margin: 0 auto;">
+    <p><strong> Caso queira falar com o criador:</strong></p>
+    <p><strong>Telefone:</strong> 55 (13) 98870-6870</p>
+    <p><strong>Email:</strong> gui05sagui2008@gmail.com</p>
+
+    <!-- Formulário de Mensagem -->
+    <form action="https://formspree.io/f/SEU_CODIGO_AQUI" method="POST" class="form-contato">
+        
+        <label for="nome">Seu Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Ex: Sir Leon" required>
+
+        <label for="email">Seu E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+
+        <label for="mensagem">Sua Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem para a guilda..." required></textarea>
+
+        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+    </form>
+</div>
+
+        <br><br>
+        <footer>
+           <h4 class="qualquer2" >&copy; Todos os direitos reservados</h4>
+        </footer>
+
+        <button id="btnTopo" class="botaol" style="position: fixed; bottom: 20px; right: 20px; display: none; z-index: 999; 
+        padding: 10px 15px;">⬆️ Topo</button>
+    </main>
+    
+</body>
+</html>
