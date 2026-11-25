@@ -58,7 +58,7 @@ O projeto foi dividido em fases de evolução:
 
 ## 🔗 Acesso ao Projeto
 
-- **GitHub Pages / Repositório:** [Acesse o repositório do projeto no GitHub](https://github.com/gui05dragon10-max/ficha-heroi-parte1.git)
+- **GitHub Pages / Repositório:** [Acesse o repositório do projeto no GitHub](https://github.com/gui05dragon10-max/ficha-heroi-parte2.git)
 
 ---
 
